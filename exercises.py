@@ -28,6 +28,7 @@ def is_palindrome(str):
     Write a function that checks if a given string is a palindrome (i.e. reads the same
     forwards and backwards). For example, "racecar" is a palindrome.
     '''
+    
     return False
 
 def is_anagram(str1, str2):
@@ -35,7 +36,10 @@ def is_anagram(str1, str2):
     Write a function that checks if two given strings are anagrams (i.e. contain the same
     letters but in a different order). For example, "listen" and "silent" are anagrams.
     '''
-    return False
+    if sorted(str1) == sorted(str2):
+        return True
+    else:
+        return False
 
 def count_vowels(str):
     '''
@@ -67,8 +71,8 @@ if __name__ == '__main__':
     fizzbuzz(100)
     # print(is_palindrome('racecar'))
     # print(is_palindrome('not a palindrome'))
-    # print(is_anagram('listen', 'silent'))
-    # print(is_anagram('not an anagram', 'anagram'))
+    print(is_anagram('listen', 'silent'))
+    print(is_anagram('not an anagram', 'anagram'))
     print(count_vowels('there are vowels in HERE'))
     print(reverse_list([1, 2, 3, 4, 5]))
    
