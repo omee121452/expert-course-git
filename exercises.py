@@ -21,7 +21,7 @@ def fizzbuzz(num):
         else:
             print(i)
 
-fizzbuzz(100)
+#fizzbuzz(100)
 
 def is_palindrome(str):
     '''
@@ -42,7 +42,15 @@ def count_vowels(str):
     Write a program that takes a string as input and counts the number of vowels
     (a, e, i, o, u, A, E, I, O, U) in the string.
     '''
-    return 0
+    vowels=['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    amountOfVowels = 0 
+    for i in str:
+        for x in vowels:
+            if i == x:
+                amountOfVowels +=1
+    return amountOfVowels
+
+
 
 def reverse_list(lst):
     '''
@@ -53,11 +61,11 @@ def reverse_list(lst):
 
 if __name__ == '__main__':
     # test and run your functions here
-    # fizzbuzz()
+    fizzbuzz(100)
     # print(is_palindrome('racecar'))
     # print(is_palindrome('not a palindrome'))
     # print(is_anagram('listen', 'silent'))
     # print(is_anagram('not an anagram', 'anagram'))
-    # print(count_vowels('there are vowels in HERE'))
+    print(count_vowels('there are vowels in HERE'))
     # print(reverse_list([1, 2, 3, 4, 5]))
-    fizzbuzz(100)
+   
