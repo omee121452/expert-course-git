@@ -5,13 +5,23 @@ Add, commit, and push your commit to origin on this new branch.
 Finally, create a pull request.
 '''
 
-def fizzbuzz():
+def fizzbuzz(num):
     '''
     Write a function that prints the numbers from 1 to 100. But for multiples of three
     print "Fizz" instead of the number and for the multiples of five print "Buzz". For
     numbers which are multiples of both three and five print "FizzBuzz".
     '''
-    print('')
+    for i in range(num):
+        if i % 5==0 and i % 3==0: 
+            print('FizzBuzz') 
+        elif i % 3==0:
+            print('Fizz')
+        elif i % 5==0:
+            print('Buzz') 
+        else:
+            print(i)
+
+fizzbuzz(100)
 
 def is_palindrome(str):
     '''
@@ -50,4 +60,4 @@ if __name__ == '__main__':
     # print(is_anagram('not an anagram', 'anagram'))
     # print(count_vowels('there are vowels in HERE'))
     # print(reverse_list([1, 2, 3, 4, 5]))
-
+    fizzbuzz(100)
