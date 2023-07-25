@@ -57,7 +57,10 @@ def reverse_list(lst):
     Write a function that takes a list as input and returns a new list with the elements
     reversed. For example, [1, 2, 3] should become [3, 2, 1].
     '''
-    return lst
+    rvrsdLst=[]
+    for i in lst:
+        rvrsdLst.append(lst[-i])
+    return rvrsdLst
 
 if __name__ == '__main__':
     # test and run your functions here
@@ -67,5 +70,5 @@ if __name__ == '__main__':
     # print(is_anagram('listen', 'silent'))
     # print(is_anagram('not an anagram', 'anagram'))
     print(count_vowels('there are vowels in HERE'))
-    # print(reverse_list([1, 2, 3, 4, 5]))
+    print(reverse_list([1, 2, 3, 4, 5]))
    
